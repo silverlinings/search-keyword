@@ -17,8 +17,6 @@ DEVELOPER_KEY = "AIzaSyA3rTFemFJxBEq9Md28bI1dqNXMGTf4eec"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
-
-
 class MainHandler(webapp2.RequestHandler):
    
    def get(self):
@@ -55,10 +53,6 @@ class MainHandler(webapp2.RequestHandler):
         
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render(template_values))
-       
-        # self.response.out.write(videoStr)
-       # self.response.out.write(channelStr)
-       # self.response.out.write(playlistStr)
         
 app = webapp2.WSGIApplication([
   ('/.*', MainHandler),
