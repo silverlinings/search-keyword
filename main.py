@@ -50,7 +50,8 @@ class MainHandler(webapp2.RequestHandler):
          'channels': channels,
          'playlists': playlists
         }
-        
+       
+	self.response.headers['Content-type'] = 'text/plain' 
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render(template_values))
         
