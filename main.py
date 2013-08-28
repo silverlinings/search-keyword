@@ -11,15 +11,16 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'])
 
 REGISTRATION_INSTRUCTIONS = """
-    You must set up a project and get an API key to run this code. Please see
-    the instructions for creating a project and a key at <a
-    href="https://developers.google.com/youtube/registering_an_application"
-    >https://developers.google.com/youtube/registering_an_application</a>.
-    You do not need to set up OAuth credentials for this project.
-    Once you have obtained a key, search for the text 'REPLACE_ME' in the 
-    code below and replace that string with your key.
-    <br><br>
-    Make sure that you have enabled the YouTube Data API (v3) for your project."""
+    You must set up a project and get an API key to run this code. 
+    Steps:
+    1.  Visit <a href="https://developers.google.com/youtube/registering_an_application"
+    >https://developers.google.com/youtube/registering_an_application</a> for 
+    for instructions on setting up a project and key. Make sure that you have 
+    enabled the YouTube Data API (v3) for your project. 
+    You do not need to set up OAuth credentials for this project. <br>
+    2.  Once you have obtained a key, search for the text 'REPLACE_ME' in the 
+    code and replace that string with your key. <br> 
+    3.  Click the reload button above the output container to view the new output. """
 
 # Set API_KEY to the "API key" value from the "Access" tab of the
 # Google APIs Console http://code.google.com/apis/console#access
