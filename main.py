@@ -11,8 +11,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'])
 
 REGISTRATION_INSTRUCTIONS = """
-    You must set up a project and get an API key to run this code. 
-    Steps:
+    You must set up a project and get an API key to run this code. <br> 
+    Steps: <br>
     1.  Visit <a href="https://developers.google.com/youtube/registering_an_application"
     >https://developers.google.com/youtube/registering_an_application</a> for 
     for instructions on setting up a project and key. Make sure that you have 
@@ -33,7 +33,7 @@ QUERY_TERM = "dog"
 
 class MainHandler(webapp2.RequestHandler):
   def get(self):
-    if DEVELOPER_KEY == "REPLACE_ME":
+    if API_KEY == "REPLACE_ME":
       self.response.write(REGISTRATION_INSTRUCTIONS)
     else:
       #Present a list of videos associated with the keyword
@@ -71,8 +71,8 @@ class MainHandler(webapp2.RequestHandler):
       'channels': channels,
       'playlists': playlists
     }
-       
-	  self.response.headers['Content-type'] = 'text/html' 
+
+    self.response.headers['Content-type'] = 'text/html' 
     template = JINJA_ENVIRONMENT.get_template('index.html')
     self.response.write(template.render(template_values))
         
