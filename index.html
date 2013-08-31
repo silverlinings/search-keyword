@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-{% autoescape true %}
 <html>
   <body>
     <p>Videos: </p>
     {% for video in search_results["videos"] %}
-    	{{ video }}<br>
+    	<div>{{ video }}</div>
     {% endfor %}
     
-    <p>Channels:</p>
+    <p>Channels: </p>
     {% for channel in search_results["channels"] %}
-    	{{ channel }} <br>
+    	<div>{{ channel }}</div>
     {% endfor %}
     
-    <p>Playlists:</p>
+    <p>Playlists: </p>
     {% for playlist in search_results["playlists"] %}
-    	{{ playlist }} <br>
-    {% endfor %}
+    	<div>{{ playlist }}</div>
+    {% endfor %}    
   </body>
 </html>
-{% endautoescape %}
