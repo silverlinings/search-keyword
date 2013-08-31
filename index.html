@@ -3,17 +3,17 @@
 <html>
   <body>
     <p>Videos: </p>
-    {% for video in videos %}
+    {% for video in search_results["videos"] %}
     	{{ video }}<br>
     {% endfor %}
     
     <p>Channels:</p>
-    {% for channel in channels %}
+    {% for channel in search_results["channels"] %}
     	{{ channel }} <br>
     {% endfor %}
     
     <p>Playlists:</p>
-    {% for playlist in playlists %}
+    {% for playlist in search_results["playlists"] %}
     	{{ playlist }} <br>
     {% endfor %}
   </body>

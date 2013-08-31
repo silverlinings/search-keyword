@@ -51,25 +51,24 @@ class MainHandler(webapp2.RequestHandler):
       maxResults=5
     ).execute()
     
-    videos = []
-    channels = []
-    playlists = []
+    search_results = {}
+    search_results["videos"] = []
+    search_results["channels"] = []
+    search_results["playlists"] = []
     
     for search_result in search_response.get("items", []):
       if search_result["id"]["kind"] == "youtube#video":
-        videos.append("%s (%s)" % (search_result["snippet"]["title"], 
+        search_results["videos"].append("%s (%s)" % (search_result["snippet"]["title"], 
               search_result["id"]["videoId"]))
       elif search_result["id"]["kind"] == "youtube#channel":
-        channels.append("%s (%s)" % (search_result["snippet"]["title"], 
+        search_results["channels"].append("%s (%s)" % (search_result["snippet"]["title"], 
               search_result["id"]["channelId"]))
       elif search_result["id"]["kind"] == "youtube#playlist":
-        playlists.append("%s (%s)" % (search_result["snippet"]["title"], 
+        search_results["playlists"].append("%s (%s)" % (search_result["snippet"]["title"], 
               search_result["id"]["playlistId"]))
     
     template_values = {
-      'videos': videos,
-      'channels': channels,
-      'playlists': playlists
+       "search_results": search_results
     }
 
     self.response.headers['Content-type'] = 'text/html' 
@@ -79,3 +78,4 @@ class MainHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
   ('/.*', MainHandler),
 ], debug=True)
+
