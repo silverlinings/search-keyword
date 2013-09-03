@@ -14,7 +14,7 @@ REGISTRATION_INSTRUCTIONS = """
     You must set up a project and get an API key to run this code. <br> 
     Steps: <br>
     1.  Visit <a href="https://developers.google.com/youtube/registering_an_application"
-    >https://developers.google.com/youtube/registering_an_application</a> for 
+    target='_blank'>https://developers.google.com/youtube/registering_an_application</a> for 
     for instructions on setting up a project and key. Make sure that you have 
     enabled the YouTube Data API (v3) for your project. 
     You do not need to set up OAuth credentials for this project. <br>
