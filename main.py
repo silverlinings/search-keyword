@@ -14,7 +14,7 @@ REGISTRATION_INSTRUCTIONS = """
     You must set up a project and get an API key to run this code. <br> 
     Steps: <br>
     1.  Visit <a href="https://devsite.googleplex.com/youtube/v3/code_samples/python_appengine#create-api-key"
-    target='_blank'>https://devsite.googleplex.com/youtube/v3/code_samples/python_appengine#create-api-key</a> 
+    target='_top'>https://devsite.googleplex.com/youtube/v3/code_samples/python_appengine#create-api-key</a> 
     for instructions on setting up a project and key. Make sure that you have 
     enabled the YouTube Data API (v3) for your project. 
     You do not need to set up OAuth credentials for this project. <br>
